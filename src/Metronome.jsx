@@ -51,7 +51,7 @@ const Metronome = () => {
   const renderBars = () => {
     const barArray = Array(bars).fill(0);
     return (
-      <View style={{ flexDirection: 'row' }}>
+      <View className="flex-row">
         {barArray.map((_, index) => (
           <View
             key={index}
@@ -69,7 +69,7 @@ const Metronome = () => {
   };
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View className="flex-1 justify-center items-center">
       <Text style={{ fontSize: 48 }}>{bpm}</Text>
       {renderBars()}
       <View style={{ flexDirection: 'row', marginTop: 16 }}>
